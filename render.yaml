@@ -1,0 +1,26 @@
+# render.yaml
+# OpsDesk deployment blueprint for Render.com
+
+services:
+  - type: web
+    name: opsdesk
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: "echo 'Zero build step required. Running on native Node.js 22 built-ins.'"
+    startCommand: "node server/index.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: IS_CLOUD
+        value: "1"
+      - key: DEMO_MODE
+        value: "true"
+      - key: SEED_ON_START
+        value: "true"
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: SESSION_SECRET
+        generateValue: true
