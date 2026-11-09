@@ -1,0 +1,156 @@
+/* web/css/tokens.css */
+/* Design Tokens: 4px/8px Spacing Grid, Flat Enterprise Palette, Local Typography */
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/IBMPlexSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/IBMPlexSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2');
+}
+
+:root {
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Spacing Grid (4px/8px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Shadows (Subtle, only for popovers/dialogs) */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+
+  /* Light Theme (Default) */
+  --bg-app: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-hover: #e2e8f0;
+  --bg-active: #cbd5e1;
+
+  --border-subtle: #e2e8f0;
+  --border-main: #cbd5e1;
+  --border-focus: #0f766e;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --text-inverse: #ffffff;
+
+  /* Single Accent: Restrained Deep Teal */
+  --accent-main: #0f766e;
+  --accent-hover: #115e59;
+  --accent-subtle: #ccfbf1;
+  --accent-text: #134e4a;
+
+  /* Semantic SLA & Status Colors (Contrast Verified >= 4.5:1) */
+  --status-ok-bg: #dcfce7;
+  --status-ok-text: #166534;
+  --status-ok-border: #86efac;
+
+  --status-risk-bg: #fef3c7;
+  --status-risk-text: #92400e;
+  --status-risk-border: #fcd34d;
+
+  --status-breached-bg: #fee2e2;
+  --status-breached-text: #991b1b;
+  --status-breached-border: #fca5a5;
+
+  --status-info-bg: #e0f2fe;
+  --status-info-text: #075985;
+  --status-info-border: #7dd3fc;
+
+  --status-neutral-bg: #f1f5f9;
+  --status-neutral-text: #334155;
+  --status-neutral-border: #cbd5e1;
+
+  /* Internal Note styling */
+  --note-bg: #fffbeb;
+  --note-border: #fef3c7;
+  --note-text: #78350f;
+}
+
+[data-theme="dark"] {
+  --bg-app: #0b0f19;
+  --bg-surface: #111827;
+  --bg-subtle: #1f2937;
+  --bg-hover: #283548;
+  --bg-active: #374151;
+
+  --border-subtle: #1f2937;
+  --border-main: #374151;
+  --border-focus: #14b8a6;
+
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+  --text-inverse: #0b0f19;
+
+  --accent-main: #14b8a6;
+  --accent-hover: #2dd4bf;
+  --accent-subtle: #134e4a;
+  --accent-text: #ccfbf1;
+
+  --status-ok-bg: #064e3b;
+  --status-ok-text: #86efac;
+  --status-ok-border: #059669;
+
+  --status-risk-bg: #78350f;
+  --status-risk-text: #fde68a;
+  --status-risk-border: #d97706;
+
+  --status-breached-bg: #7f1d1d;
+  --status-breached-text: #fca5a5;
+  --status-breached-border: #dc2626;
+
+  --status-info-bg: #0c4a6e;
+  --status-info-text: #bae6fd;
+  --status-info-border: #0284c7;
+
+  --status-neutral-bg: #1f2937;
+  --status-neutral-text: #d1d5db;
+  --status-neutral-border: #4b5563;
+
+  --note-bg: #291e0a;
+  --note-border: #523b12;
+  --note-text: #fef3c7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
