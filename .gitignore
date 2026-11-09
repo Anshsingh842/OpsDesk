@@ -1,0 +1,22 @@
+# .gitignore for OpsDesk repository
+
+# Local databases and runtime state
+data/
+logs/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.token
+port.txt
+pid.txt
+session_secret.txt
+
+# Bundled Windows binary (retained inside ZIP for Ansh, excluded from git repo)
+runtime/node.exe
+
+# OS and Editor junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+.idea/
+.vscode/
